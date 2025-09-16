@@ -357,7 +357,7 @@ func (s *DialogClientSession) WaitAnswer(ctx context.Context, opts AnswerOptions
 
 				// Remove Via from original request and send it through dialog transaction
 				// This keeps transaction within dialog
-				inviteRequest.RemoveHeader("Via")
+				// inviteRequest.RemoveHeader("Via")
 				tx, err = s.TransactionRequest(ctx, inviteRequest)
 
 				if err != nil {
